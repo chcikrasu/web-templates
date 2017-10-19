@@ -92,7 +92,7 @@
 
 
             <div class="form-row">
-              <button type="submit">Hledat nabídky</button>
+            <button type="button" id="find-offers">Hledat nabídky</button>
             </div>
 
           </form>
@@ -194,6 +194,11 @@
       {
         console.log("fdgdfg");
         alert($("#serviceTypes").val());
+      });
+
+      $("#find-offers").click(function()
+      {
+        window.location.href= "/offers.html";
       });
     }));
 
