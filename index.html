@@ -183,7 +183,21 @@
         var option = `<option value="${basicServiceTypes[i].id}">${basicServiceTypes[i].name}</option>`;
         $("#serviceTypes").append(option);
       }
+
+      $("#serviceTypes").select(function()
+      {
+        console.log("koko");
+        alert($("#serviceTypes").value());
+      });
+
+      $("#serviceTypes").change(function()
+      {
+        console.log("fdgdfg");
+        alert($("#serviceTypes").val());
+      });
     }));
+
+    
 
     var basicServiceTypes = [{
       id: "1",
