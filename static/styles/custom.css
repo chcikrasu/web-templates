@@ -191,6 +191,16 @@ footer p {
   margin-bottom: 2em
 }
 
+.offer-address-container
+{
+  float: left;
+}
+
+.offer-stars-container
+{
+  float: right;
+}
+
 @media (max-width: 767px) {
   .section-preview .image img {
     width: 100%
