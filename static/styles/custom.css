@@ -201,6 +201,11 @@ footer p {
   float: right;
 }
 
+.offers-image
+{
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .section-preview .image img {
     width: 100%
