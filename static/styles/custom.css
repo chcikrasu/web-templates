@@ -206,6 +206,12 @@ footer p {
   width: 100%;
 }
 
+.offer-order-btn
+{
+  float: right;
+  background-color:#21af2f;
+}
+
 @media (max-width: 767px) {
   .section-preview .image img {
     width: 100%

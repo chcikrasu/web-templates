@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chci krásu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/styles/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../static/styles/custom.css">
+    <link rel="stylesheet" href="../static/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/styles/form-register.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Chci krásu</a>
+                <!--? this is what we are using for mobile view as a button to show menu bla bla -->
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--? this part is collapsable. You can see by data-target="#navbar-main" from button above -->
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" target="_blank">O projektu</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4 text-center">
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="main-content">
+
+                <!-- You only need this form and the form-login.css -->
+
+                <form class="form-register" method="post" action="#">
+
+                    <div class="form-register-with-email">
+
+                        <div class="form-white-background">
+
+                            <div class="form-title-row">
+                                <h1>Nový účet</h1>
+                            </div>
+
+                            <div class="form-row">
+                                <label>
+                                    <span>Jméno a příjmení</span>
+                                    <input type="text" name="name">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label>
+                                    <span>Telefonní číslo</span>
+                                    <input type="text" name="phone">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label>
+                                    <span>Email</span>
+                                    <input type="email" name="email">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label>
+                                    <span>Heslo</span>
+                                    <input type="password" name="password">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label class="form-checkbox">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <span>Souhlasím s
+                                            <a href="#">podmínkami užití</a> portálu ChciKrasu.cz </span>
+                                    </div>
+                                </label>
+                            </div>
+
+
+                            <div class="form-row">
+                                <button type="submit">Vytvořit účet</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2017</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
