@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chci krásu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/styles/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../static/styles/custom.css">
+    <link rel="stylesheet" href="../static/styles/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">Chci krásu</a>
+                <!--? this is what we are using for mobile view as a button to show menu bla bla -->
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--? this part is collapsable. You can see by data-target="#navbar-main" from button above -->
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" target="_blank">O projektu</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--? Page header or banner -->
+        <div class="page-header">
+            <div class="row">
+                <div class="well bs-component">
+                    <form class="form-inline">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="select" class="col-lg-2 control-label">Co</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-what" placeholder="Manikura" value="Manikura">
+                                    <!-- <select multiple="" class="form-control">
+                                        <option value="1">Manikura</option>
+                                        <option value="2">Pedikura</option>
+                                        <option value="3">Kadeřnictví</option>
+                                        <option value="4">Masáž</option>
+                                        <option value="5">Epilace</option>
+                                    </select> -->
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-when" class="col-lg-2 control-label">Kdy</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-when" placeholder="Datum a čas" value="12 listopadu 15:00">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-where" class="col-lg-2 control-label">Kde</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="input-where" placeholder="Preferovaná lokalita" value="Praha 6">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-lg-10 col-lg-offset-2">
+                                    <button type="submit" class="btn btn-primary">Hledat nabídky</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <p class="lead">Nalezeno 8 nabidek</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                </div>
+                <div class="col-lg-4">
+                    <a href="offers.html">
+                        <i class="fa fa-table fa-2x offers-map" title="Seznam nabídek" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="map"></div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2017</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+
+<script>
+    function myMap() {
+        var mapCanvas = document.getElementById( "map" );
+        var mapOptions = {
+            center: new google.maps.LatLng( 51.5, -0.2 ),
+            zoom: 10
+        };
+        var map = new google.maps.Map( mapCanvas, mapOptions );
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDABX-HX1Ti_76FmAikYwC0k07sQtKxI_0&callback=myMap"></script>
+
+</html>

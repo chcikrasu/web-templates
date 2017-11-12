@@ -217,6 +217,34 @@ footer p {
   background-color:#21af2f;
 }
 
+.review-form
+{
+  margin-top: 10%;
+}
+
+.review-submit-btn
+{
+  margin-left: 35%;
+}
+
+/* .offer-ordered-input input 
+{
+  cursor: pointer;
+} */
+
+.form-control[disabled]
+{
+    cursor: default;
+}
+
+#map
+{
+  width: 100%;
+  height: -webkit-fill-available;
+  position: relative;
+  overflow: hidden;
+}
+
 @media (max-width: 767px) {
   .section-preview .image img {
     width: 100%
