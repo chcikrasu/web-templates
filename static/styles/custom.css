@@ -227,6 +227,13 @@ footer p {
   margin-left: 35%;
 }
 
+.favorite-salon-link
+{
+  font-size: small;
+  float: right;
+  text-decoration: underline;
+}
+
 /* .offer-ordered-input input 
 {
   cursor: pointer;
