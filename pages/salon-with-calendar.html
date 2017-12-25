@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chci krásu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/styles/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../static/styles/custom.css">
+    <link rel="stylesheet" href="../static/styles/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">Chci krásu</a>
+                <!--? this is what we are using for mobile view as a button to show menu bla bla -->
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--? this part is collapsable. You can see by data-target="#navbar-main" from button above -->
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" target="_blank">O projektu</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--? Page header or banner -->
+        <div class="page-header">
+            <div class="col-lg-4">
+                <p class="lead">
+                    <a href="offers.html">Nabídky</a> > Salon Swan </p>
+            </div>
+            <div class="col-lg-4 text-center">
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card h-100">
+                    <div class="card-block">
+                        <a href="#book" class="btn btn-success offer-order-btn" data-toggle="modal" data-target="#myModal">Objednat se</a>
+                        <h3 class="card-title">Salon Swan</h3>
+                        <div>
+
+                            <div class="offer-address-container">
+                                Ivanova 12
+                            </div>
+                            <div class="offer-stars-container">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
+                        <div>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © 2017</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</body>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label for="input-service" class="col-lg-3 control-label">Servis</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control offer-ordered-input" id="input-service" placeholder="Manikura">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                                <button class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModal2" type="button">Pokračovat</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="float:left">Kalendář</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Calendar will be here
+                <button class="btn btn-success" type="button">Objednat se</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../static/js/jquery-1.10.2.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+
+</html>
