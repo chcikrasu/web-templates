@@ -2,251 +2,448 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Chci krásu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../static/styles/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="../static/styles/custom.css">
-    <link rel="stylesheet" href="../static/styles/font-awesome.min.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chci krásu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../static/styles/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="../static/styles/custom.css">
+  <link rel="stylesheet" href="../static/styles/font-awesome.min.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
       <script src="../bower_components/respond/dest/respond.min.js"></script>
     <![endif]-->
+
+
+  <style>
+    #form-container {
+      margin-top: 65px;
+    }
+    #list-container {
+      /*border: 2px solid red;*/
+      height: calc(100vh - 125px);
+    }
+    #list-container .row:first-child {
+      height: 100%;
+    }
+
+    .offers {
+      /*border: 2px solid blue;*/
+      height: 100%;
+      overflow: auto;
+    }
+    #offers-map {
+      /*border: 2px solid green;*/
+      height: 100%;
+      overflow: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .offers {
+        height: auto;
+      }
+    }
+
+  </style>
 </head>
 
 <body style="">
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="index.html" class="navbar-brand">Chci krásu</a>
-                <!--? this is what we are using for mobile view as a button to show menu bla bla -->
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!--? this part is collapsable. You can see by data-target="#navbar-main" from button above -->
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="contactus.html">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">Chci krásu</a>
+      <!--? this is what we are using for mobile view as a button to show menu bla bla -->
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-
-    <div class="container">
-        <!--? Page header or banner -->
-        <div class="page-header">
-            <div class="row">
-                <div class="well bs-component">
-                    <form class="form-inline">
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="select" class="col-lg-2 control-label">Co</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="input-what" placeholder="Manikura" value="Manikura">
-                                    <!-- <select multiple="" class="form-control">
-                                        <option value="1">Manikura</option>
-                                        <option value="2">Pedikura</option>
-                                        <option value="3">Kadeřnictví</option>
-                                        <option value="4">Masáž</option>
-                                        <option value="5">Epilace</option>
-                                    </select> -->
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="input-when" class="col-lg-2 control-label">Kdy</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="input-when" placeholder="Datum a čas" value="12 listopadu 15:00">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="input-where" class="col-lg-2 control-label">Kde</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="input-where" placeholder="Preferovaná lokalita" value="Praha 6">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="submit" class="btn btn-primary">Hledat nabídky</button>
-                                </div>
-                            </div>
-
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="col-lg-4">
-                    <p class="lead">Nalezeno 8 nabidek</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                </div>
-                <div class="col-lg-4">
-                    <a href="offers-map.html#offers-found">
-                        <i class="fa fa-map-marker fa-2x offers-map" title="Mapa nabídek" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="offers">
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Salon Swan</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Kadeřnictví na Andělu</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Studio Nice</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Salon Swan</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Kadeřnictví na Andělu</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card h-100">
-                    <div class="card-block">
-                        <h3 class="card-title">Studio Nice</h3>
-                        <div>
-                            <div class="offer-address-container">
-                                Ivanova 12
-                            </div>
-                            <div class="offer-stars-container">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <img class="img-responsive offers-image" src="http://placehold.it/464x232" alt="">
-                        <div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright © 2017</p>
-                </div>
-            </div>
-        </footer>
+    <!--? this part is collapsable. You can see by data-target="#navbar-main" from button above -->
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="contactus.html">Kontakt</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</div>
 
-    <script src="../static/js/jquery-1.10.2.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+<div class="container-fluid" id="form-container">
+  <div class="row text-center" style="margin-top: 8px;">
+      <form class="form-inline">
+        <fieldset>
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="input-what" placeholder="Manikura" value="Manikura">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="input-when" placeholder="Datum a čas" value="12 listopadu 15:00">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="input-where" placeholder="Preferovaná lokalita" value="Praha 6">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn btn-primary">Hledat nabídky</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+  </div>
+</div>
+
+<div class="visible-sm visible-md visible-lg" style="height: 15px;"></div>
+
+<div class="container-fluid" id="list-container">
+  <div class="row">
+    <div class="col-sm-7 offers">
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">Salon Swan</h3>
+          <div class="row">
+            <div class="offer-address-container">
+              Ivanova 12
+            </div>
+            <div class="offer-stars-container">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-responsive offers-image" src="http://placehold.it/232x117" alt="">
+            </div>
+            <div class="col-sm-7">
+              <p class="card-text">With supporting text below as a natural lead-in to additional
+                                   content.</p>
+              <a href="offer.html" class="btn btn-success">Objednat se za 300Kč</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="offers-map" class="col-sm-5 visible-sm visible-md visible-lg">
+      <iframe width="100%" height="100%" src="http://www.openstreetmap.org/export/embed.html?bbox=79.84942674636841%2C6.899900944350287%2C79.85650777816772%2C6.90436374803887&amp;layers=ND"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="../static/js/jquery-1.10.2.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v3.3.7/js/affix.js"></script>
 
 </body>
 
